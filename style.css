@@ -11,3 +11,255 @@ html{
 .attribution{
   display: none;
 }
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(236, 72%, 79%, 0.2);
+}
+
+.bg-design-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-image: url(images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 27%;
+}
+
+.bg-design-bottom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-image: url(images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 27%;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  margin-bottom: 2rem;
+  color: hsl(233, 13%, 49%);
+}
+
+.switch__container{
+  margin-block: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: hsl(234, 14%, 74%);
+}
+
+h2{
+  font-size: 1rem;
+}
+
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+}
+
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:hover{
+  opacity: 0.5;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 5px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.plans__container{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.plan{
+  width: 300px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan--pro{
+  background: linear-gradient(to bottom, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+  padding-block: 3rem;
+}
+
+.services{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.item{
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: hsl(233, 13%, 49%);
+  padding-block: 1rem;
+  width: 100%;
+  border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+.item:last-child{
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.amount{
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(232, 13%, 33%);
+  margin-bottom: 2rem;
+
+  & span{
+    font-size: 2rem;
+    padding-right: 0.5rem;
+  }
+}
+
+button{
+  width: 100%;
+  padding-block: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid hsl(236, 72%, 79%);
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: hsl(240, 78%, 98%);
+  cursor: pointer;
+}
+
+button:hover, button:active{
+  background: transparent;
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+}
+
+h3{
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(233, 13%, 49%);
+  margin-bottom: 1rem;
+}
+
+.plan--pro h3{
+  color: hsl(240, 78%, 98%);
+}
+
+.plan--pro .amount{
+  color: hsl(240, 78%, 98%);
+}
+
+.plan--pro .item{
+  color: hsl(240, 78%, 98%);
+}
+
+.plan--pro button{
+  background: hsl(240, 78%, 98%);
+  color: hsl(237, 63%, 64%);
+
+  &:hover, &:active{
+    background: transparent;
+    color: hsl(240, 78%, 98%);
+    border: 1px solid hsl(240, 78%, 98%);
+  }
+}
+
+@media (max-width: 1000px){
+  .plan{
+    width: 256.14px;
+  }
+}
+
+@media (max-width: 800px){
+  .wrapper{
+    padding-block: 5rem;
+  }
+  .plans__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .plan{
+    width: 325px;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+  .amount{
+    font-size: 5rem;
+  }
+  .item{
+    font-size: 1rem;
+  }
+  button{
+    padding-block: 1rem;
+    letter-spacing: 2px;
+  }
+}
