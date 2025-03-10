@@ -24,14 +24,16 @@ body{
 .bg-design-top{
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  bottom: 0;
+  /* width: 100%;
+  height: 100vh; */
   z-index: -1;
   background-image: url(images/bg-top.svg);
   background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 27%;
+  background-position: top  right;
+  background-size: 24%;
 }
 
 .bg-design-bottom{
@@ -137,8 +139,8 @@ input:checked + .slider:before {
 }
 
 .plan{
-  width: 300px;
-  padding: 2rem;
+  width: 350px;
+  padding: 2.5rem;
   background-color: white;
   border-radius: 10px; 
   display: flex;
@@ -148,7 +150,7 @@ input:checked + .slider:before {
 
 .plan--pro{
   background: linear-gradient(to bottom, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
-  padding-block: 3rem;
+  padding-block: 4rem;
 }
 
 .services{
@@ -157,7 +159,7 @@ input:checked + .slider:before {
 }
 .item{
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   color: hsl(233, 13%, 49%);
   padding-block: 1rem;
@@ -172,7 +174,7 @@ input:checked + .slider:before {
 .amount{
   display: flex;
   align-items: center;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   color: hsl(232, 13%, 33%);
   margin-bottom: 2rem;
@@ -188,7 +190,7 @@ button{
   padding-block: 0.8rem;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   border-radius: 5px;
   border: 1px solid hsl(236, 72%, 79%);
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -203,7 +205,7 @@ button:hover, button:active{
 }
 
 h3{
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: hsl(233, 13%, 49%);
   margin-bottom: 1rem;
@@ -232,13 +234,26 @@ h3{
   }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1050px){
   .plan{
     width: 256.14px;
+  }
+  .amount{
+    font-size: 4rem;
+  }
+  .item{
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 800px){
+  .bg-design-top{
+    background-position: right -50vw top -5vh;
+    background-size: 100%;
+  }
+  .bg-design-bottom{
+    display: none;
+  }
   .wrapper{
     padding-block: 5rem;
   }
