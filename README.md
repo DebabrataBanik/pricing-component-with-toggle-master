@@ -8,6 +8,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built with](#built-with)
+- [Continued Development](#continued-development)
 
 ### The challenge
 
@@ -23,7 +24,7 @@ Your users should be able to:
 
 ### Links
 
-- [Live Site]()
+- [Live Site](https://debabratabanik.github.io/pricing-component-with-toggle-master/)
 
 ### Built with
 
@@ -32,3 +33,7 @@ Your users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+
+### Continued Development
+
+The background designs still needs work. This projects can be build using only HTML and CSS, gotta try that out too.
